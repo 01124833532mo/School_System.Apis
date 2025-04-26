@@ -7,9 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SchoolProject.Data\SchoolProject.Data.csproj" />
+    <ProjectReference Include="..\SchoolProject.Data\SchoolProject.Core.Domain.csproj" />
     <ProjectReference Include="..\SchoolProject.Infrastructure\SchoolProject.Infrastructure.csproj" />
-    <ProjectReference Include="..\SchoolProject.Service\SchoolProject.Service.csproj" />
+    <ProjectReference Include="..\SchoolProject.Service\SchoolProject.Core.Service.csproj" />
   </ItemGroup>
 
   <ItemGroup>

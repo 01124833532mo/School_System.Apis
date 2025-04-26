@@ -3,15 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35004.147
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolProject.Api", "SchoolProject.Api\SchoolProject.Api.csproj", "{21A4EEFB-3765-4D09-994D-620F197ED80E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchoolProject.Api", "SchoolProject.Api\SchoolProject.Api.csproj", "{21A4EEFB-3765-4D09-994D-620F197ED80E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolProject.Data", "SchoolProject.Data\SchoolProject.Data.csproj", "{9569325C-6E44-4CDA-A540-36D2BCB1CD9E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchoolProject.Core.Domain", "SchoolProject.Data\SchoolProject.Core.Domain.csproj", "{9569325C-6E44-4CDA-A540-36D2BCB1CD9E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolProject.Infrastructure", "SchoolProject.Infrastructure\SchoolProject.Infrastructure.csproj", "{FF08F9FE-64CA-4F5D-BFC6-08E922CC1A0A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchoolProject.Infrastructure", "SchoolProject.Infrastructure\SchoolProject.Infrastructure.csproj", "{FF08F9FE-64CA-4F5D-BFC6-08E922CC1A0A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolProject.Service", "SchoolProject.Service\SchoolProject.Service.csproj", "{2AC5997E-3D99-4082-86EC-E35D17321877}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchoolProject.Core.Service", "SchoolProject.Service\SchoolProject.Core.Service.csproj", "{2AC5997E-3D99-4082-86EC-E35D17321877}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolProject.Core", "SchoolProject.Core\SchoolProject.Core.csproj", "{D3183224-18B7-417D-9C97-90B403A04995}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchoolProject.Core.Application", "SchoolProject.Core\SchoolProject.Core.Application.csproj", "{D3183224-18B7-417D-9C97-90B403A04995}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Apis", "Apis", "{E20ABD2C-B68D-4270-A676-11BA808B5749}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{C53404E2-F79F-4060-B8A2-12CA07CA80DF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{6CDB5141-0E7D-41ED-8463-D553F8A85529}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -42,6 +48,13 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{21A4EEFB-3765-4D09-994D-620F197ED80E} = {E20ABD2C-B68D-4270-A676-11BA808B5749}
+		{9569325C-6E44-4CDA-A540-36D2BCB1CD9E} = {C53404E2-F79F-4060-B8A2-12CA07CA80DF}
+		{FF08F9FE-64CA-4F5D-BFC6-08E922CC1A0A} = {6CDB5141-0E7D-41ED-8463-D553F8A85529}
+		{2AC5997E-3D99-4082-86EC-E35D17321877} = {C53404E2-F79F-4060-B8A2-12CA07CA80DF}
+		{D3183224-18B7-417D-9C97-90B403A04995} = {C53404E2-F79F-4060-B8A2-12CA07CA80DF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AEDE1BBB-D380-4EBF-A377-6E5250E3492A}
