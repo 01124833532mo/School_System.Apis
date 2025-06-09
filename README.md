@@ -50,38 +50,49 @@ A comprehensive API system for managing school operations: student records, cour
 #### ✅ Project Structure
 ---
 
-## 🏗️ Project Structure
+## 📂 Project Architecture
+The project follows **Clean Architecture** principles, with a clear separation of concerns:
 
 ```plaintext
-SchoolSystem
-├── SchoolSystem.Core                  # Domain Layer
-│   ├── Entities                       # Core business models
-│   ├── Domain.Interfaces              # Domain contracts (e.g., IRepository)
-│   ├── Routing
-│   └── Specifications
+School_System.Apis/
+├── src/
+│   ├── SchoolSystem.Core/            # 🧠 Domain Layer
+│   │   ├── Entities/                 # Core domain models (Student, Course, etc.)
+│   │   ├── Domain.Interfaces/        # Domain-level contracts (e.g. IRepository)
+│   │   ├── Specifications/           # Business rules specifications
+│   │   └── Routing/                  # Domain-level routing abstractions
+│   │
+│   ├── SchoolSystem.Application/     # 🚀 Application Layer (CQRS)
+│   │   ├── Features/                 # Use cases: Commands, Queries, Handlers
+│   │   │   ├── Students/
+│   │   │   └── Auth/
+│   │   ├── DTOs/                     # Input/Output models
+│   │   ├── Services/                 # Business logic & orchestration
+│   │   ├── Interfaces/               # Service contracts (IAuthService, etc.)
+│   │   ├── Bases/                    # Common Response / ResponseHandler
+│   │   │   ├── Response/
+│   │   │   └── ResponseHandler/
+│   │   └── Mapping/                  # AutoMapper profiles
+│   │
+│   ├── SchoolSystem.Infrastructure/  # 🛠 Infrastructure Layer
+│   │   ├── Persistence/
+│   │   │   ├── SchoolDbContext.cs   # EF Core DbContext
+│   │   │   ├── Configurations/      # Fluent API entity configs
+│   │   │   ├── Migrations/
+│   │   │   └── UnitOfWork.cs?
+│   │   └── Repositories/            # EF Core repository implementations
+│   │
+│   └── SchoolSystem.APIs/           # 🌐 Presentation Layer
+│       ├── Controllers/              # REST API endpoints
+│       ├── Middlewares/             # Custom middleware (errors, logging)
+│       ├── DTOs/                     # Models for API layer if needed
+│       ├── Filters/                  # Validation & exception filters
+│       └── Program.cs / Startup.cs  # App setup (DI, Swagger, CORS, Routing)
 │
-├── SchoolSystem.Application           # Application Layer (CQRS)
-│   ├── Features                       # Use Cases (Commands, Queries, Handlers)
-│   │   ├── Students
-│   │   └── Auth
-│   ├── DTOs                           # Input/Output models
-│   ├── Services                       # Internal application logic
-│   ├── Interfaces                     # Services contracts (IAuthService, etc.)
-│   ├── Bases                          # Response and ResponseHandler
-│   │   ├── Response
-│   │   └── ResponseHandler
-│   └── Mapping                        # AutoMapper profiles
 │
-├── SchoolSystem.Infrastructure        # Infrastructure Layer
-│   ├── Persistence
-│   │   ├── DbContext.cs
-│   │   ├── Configurations
-│   │   ├── Unit Of Work
-│   │   └── Migrations
-│   └── Repositories                   # EF Core implementations
-│
-└── SchoolSystem.APIs                  # Presentation Layer
-    └── Controllers                    # REST endpoints
+├── README.md                        # Project documentation
+└── LICENSE                          # License information
+
 ```
 
 
