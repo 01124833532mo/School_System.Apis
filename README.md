@@ -48,62 +48,41 @@ A comprehensive API system for managing school operations: student records, cour
 | **FluentValidation**  | Centralized request validation logic                          |
 
 #### ✅ Project Structure
-School_System.Apis/
+---
+
+## 🏗️ Project Structure
+
+```plaintext
+SchoolSystem
+├── SchoolSystem.Core                  # Domain Layer
+│   ├── Entities                       # Core business models
+│   ├── Domain.Interfaces              # Domain contracts (e.g., IRepository)
+│   ├── Routing
+│   └── Specifications
 │
-├── src/                              # Source files
-│   ├── SchoolSystem.Api/             # Presentation layer (Web API)
-│   │   ├── Controllers/              # API controllers
-│   │   ├── Filters/                  # Filters for request validation, error handling
-│   │   ├── DTOs/                     # Data Transfer Objects (input/output models)
-│   │   ├── Middlewares/              # Custom middlewares
-│   │   ├── Program.cs                # Entry point & dependency injection
-│   │   ├── appsettings.json          # Configuration
-│   │   └── ...                       
-│   │
-│   ├── SchoolSystem.Application/     # Application layer (business logic)
-│   │   ├── Features/                 # CQRS Handlers & Queries
-│   │   │   ├── Students/             # Student-specific commands/queries
-│   │   │   ├── Courses/              # Course-specific commands/queries
-│   │   │   └── ...                   
-│   │   ├── Interfaces/               # Service interfaces (e.g., IStudentService)
-│   │   ├── DTOs/                     # DTOs shared with the API
-│   │   ├── Validation/               # FluentValidation rules
-│   │   └── ...                       
-│   │
-│   ├── SchoolSystem.Domain/          # Domain layer (core business entities)
-│   │   ├── Entities/                 # Core domain models (e.g., Student, Course)
-│   │   ├── ValueObjects/             # Value objects (e.g., Address)
-│   │   ├── Enums/                    # Domain-specific enums
-│   │   ├── Interfaces/               # Domain interfaces (e.g., IAggregateRoot)
-│   │   └── ...                       
-│   │
-│   ├── SchoolSystem.Infrastructure/  # Infrastructure layer
-│   │   ├── Data/                     # EF Core DbContext, configurations
-│   │   │   ├── SchoolDbContext.cs    
-│   │   │   ├── Configurations/       # Entity configurations (Fluent API)
-│   │   │   └── Migrations/           # EF migrations
-│   │   ├── Repositories/             # Repository implementations
-│   │   ├── Services/                 # External service integrations
-│   │   ├── Identity/                 # Identity management (if used)
-│   │   └── ...                       
-│   │
-│   └── SchoolSystem.Shared/          # Shared kernel (common utilities)
-│       ├── Constants/                # Constant values
-│       ├── Helpers/                  # Utility classes
-│       ├── Exceptions/               # Custom exceptions
-│       └── ...                       
+├── SchoolSystem.Application           # Application Layer (CQRS)
+│   ├── Features                       # Use Cases (Commands, Queries, Handlers)
+│   │   ├── Students
+│   │   └── Auth
+│   ├── DTOs                           # Input/Output models
+│   ├── Services                       # Internal application logic
+│   ├── Interfaces                     # Services contracts (IAuthService, etc.)
+│   ├── Bases                          # Response and ResponseHandler
+│   │   ├── Response
+│   │   └── ResponseHandler
+│   └── Mapping                        # AutoMapper profiles
 │
-├── tests/                            # Unit and integration tests
-│   ├── SchoolSystem.Tests/           # Test project
-│   │   ├── Application/              # Application layer tests
-│   │   ├── Domain/                   # Domain tests
-│   │   ├── Infrastructure/           # Infrastructure tests
-│   │   └── ...                       
+├── SchoolSystem.Infrastructure        # Infrastructure Layer
+│   ├── Persistence
+│   │   ├── DbContext.cs
+│   │   ├── Configurations
+│   │   ├── Unit Of Work
+│   │   └── Migrations
+│   └── Repositories                   # EF Core implementations
 │
-├── .editorconfig                     # Editor configuration
-├── .gitignore                        # Git ignore file
-├── README.md                         # Project readme
-└── LICENSE                           # License file
+└── SchoolSystem.APIs                  # Presentation Layer
+    └── Controllers                    # REST endpoints
+```
 
 
 #### ✅ Data Layer
