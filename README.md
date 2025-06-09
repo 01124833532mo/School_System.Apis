@@ -6,6 +6,27 @@
 
 A comprehensive API system for managing school operations including student information, course management, attendance tracking, and grade reporting.
 
+## System Architecture
+
+```mermaid
+graph TD
+    A[API Layer] -->|Uses| B[Application Layer]
+    B -->|Depends on| C[Domain Layer]
+    B -->|Uses| D[Infrastructure Layer]
+    D -->|Implements| C
+    D -->|Persists| E[(Database)]
+    
+    subgraph Clean Architecture
+        C[Core/Domain]
+        B[Application/CQRS]
+    end
+    
+    subgraph Implementation Details
+        A[Controllers, DTOs]
+        D[EF Core, Repositories]
+    end
+
+
 ## Features
 
 - **Student Management**: Create, read, update, and delete student records
