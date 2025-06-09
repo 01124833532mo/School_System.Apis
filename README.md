@@ -49,4 +49,46 @@ A comprehensive API system for managing school operations: student records, cour
 
 #### ✅ Project Structure
 
+#### ✅ Data Layer
+
+- **Entity Framework Core**: Database operations and migrations
+- **Fluent API / Data Annotations**: Model configurations
+- **Migrations**: Database versioning
+- **Pagination Support**: Efficient large dataset retrieval
+
+#### ✅ Security
+
+- **JWT Authentication**: Token-based authentication
+- **ASP.NET Core Identity**: User and role management
+- **Role-based Access Control**: Secure endpoint access
+
+#### ✅ API Design
+
+- **RESTful Principles**: Standardized HTTP methods
+- **CORS Support**: Cross-origin resource sharing enabled
+- **Swagger**: Interactive documentation and testing
+
+#### ✅ Localization & Globalization
+
+- **Response Localization**: Multi-language support
+- **Request Localization**: Culture-specific handling
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- .NET 6.0 SDK or later
+- SQL Server 2019 or later
+- Visual Studio 2022 / VS Code
+
+### Installation Steps
+
+1. **Clone the repository**  
+   ```bash
+   git clone https://github.com/01124833532mo/School_System.Apis.git
+   cd School_System.Apis
+
+
 
