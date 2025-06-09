@@ -126,8 +126,8 @@ School_System.Apis/
 
 ### Prerequisites
 
-- .NET 6.0 SDK or later
-- SQL Server 2019 or later
+- .NET 8.0 SDK or later
+- SQL Server 2022 or later
 - Visual Studio 2022 / VS Code
 
 ### Installation Steps
