@@ -4,55 +4,49 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/01124833532mo/School_System.Apis)
 ![GitHub license](https://img.shields.io/github/license/01124833532mo/School_System.Apis)
 
-A comprehensive API system for managing school operations including student information, course management, attendance tracking, and grade reporting.
+A comprehensive API system for managing school operations: student records, course administration, attendance tracking, and grade reporting.
 
+---
 
-## Features
+## 📦 Features
 
-- **Student Management**: Create, read, update, and delete student records
+- **Student Management**: CRUD operations for student records
 - **Course Administration**: Manage courses, schedules, and enrollments
-- **Attendance Tracking**: Record and monitor student attendance
-- **Gradebook System**: Store and calculate student grades
+- **Attendance Tracking**: Record and track student attendance
+- **Gradebook System**: Store and calculate grades
 - **User Authentication**: Secure access with role-based permissions
-- **Reporting**: Generate various academic reports
-- **Pagination**: Efficient data retrieval with pagination
-- **Localization**: Support for multiple languages in responses
-- **Validation**: Comprehensive request validation
+- **Reporting**: Generate academic performance reports
+- **Pagination**: Efficient data retrieval
+- **Localization**: Multi-language support for responses
+- **Validation**: Robust request validation
 
-## Technologies & Architecture
+---
 
-### Design Patterns
-- **CQRS Pattern**: Separation of commands and queries
-- **Repository Pattern**: Generic repository implementation
-- **Fluent Validation**: Clean validation rules
+## 🛠 Technologies & Architecture
 
-### API Features
-- **Endpoint Design**: Well-structured operation endpoints
-- **CORS Support**: Cross-origin resource sharing enabled
-- **Swagger Documentation**: Interactive API documentation
-- **JWT Authentication**: Secure token-based authentication
-- **ASP.NET Core Identity**: Robust user management
+### 🎯 Tech Stack
 
-### Data Layer
-- **Entity Framework Core**: ORM for database operations
-- **Data Annotations**: Model configuration
-- **Fluent API**: Advanced entity configuration
-- **Pagination Schema**: Efficient data retrieval
+- **Framework:** ASP.NET Core 6.0+
+- **Database:** SQL Server 2019+
+- **ORM:** Entity Framework Core
+- **Authentication:** JWT (JSON Web Token)
+- **API Docs:** Swagger (OpenAPI)
+- **Validation:** FluentValidation
+- **Localization:** Built-in ASP.NET Core Localization
 
-### Internationalization
-- **Response Localization**: Multi-language support
-- **Request Localization**: Culture-specific processing
+---
 
-## Getting Started
+### 🏛 Architectural Design
 
-### Prerequisites
+#### ✅ Core Patterns
 
-- .NET 8.0 SDK or later
-- SQL Server 2019 or later
-- Visual Studio 2022 or VS Code (recommended)
+| Pattern               | Purpose                                                       |
+|-----------------------|---------------------------------------------------------------|
+| **CQRS**              | Separate read and write operations for scalability            |
+| **Repository**        | Encapsulate data access logic                                 |
+| **Dependency Injection** | Decoupled architecture with service registration           |
+| **FluentValidation**  | Centralized request validation logic                          |
 
-### Installation
+#### ✅ Project Structure
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/01124833532mo/School_System.Apis.git
+
